@@ -6,7 +6,18 @@ syntax on
 filetype off "needed for Vundle
 set relativenumber
 set hidden
-set guioptions =-m
+" window size and position {{{
+if has("gui_running")
+    set guioptions =-m
+    if has("win32")
+        set lines=43 columns=120
+        winpos 220 0
+    else
+        set lines=45 columns=120
+        winpos 220 0
+    endif
+endif
+"}}}
 set wrap
 set linebreak
 set nolist "list disables linebreak
@@ -20,9 +31,8 @@ set undodir=$VIM/vimfiles/undo
 set undolevels=1000 undoreload=10000
 "}}}
 " load external files{{{
-source ~/vimscripts/vundle.vim "Vundle plugin manager
-source ~/vimscripts/_session.vim "Session script - for window size and position saving
-source ~/vimscripts/neocomplete.vim "NeoComplete - Autocompletion plugin
+source ~/.vim/plugin/vundle.vim "Vundle plugin manager
+source ~/.vim/plugin/neocomplete.vim "NeoComplete - Autocompletion plugin
 "}}}
 "plugin configs {{{
 "after Vundle completes loading itself, following line re-enables filetype
@@ -43,6 +53,11 @@ autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
 au FocusLost * silent! wa
 "}}}
 "Key bindings{{{
+" move by screen lines instead of real lines
+nnoremap j gj
+nnoremap k gk
+xnoremap j gj
+xnoremap k gk
 nnoremap / /\v
 vnoremap / /\v
 map <C-n> :NERDTreeToggle<CR>
@@ -55,6 +70,7 @@ endif
 "dims other lines for distraction free writing
 nnoremap <leader>l :Limelight!! 0.8<CR>
 nnoremap <leader><space> :noh<cr>
+"clears all whitespaces in the buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>:noh<CR>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
