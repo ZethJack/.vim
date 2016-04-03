@@ -21,6 +21,5 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neco-syntax'
 Plugin 'junegunn/goyo.vim'
 Plugin 'pprovost/vim-ps1'
-Plugin 'freitass/todo.txt-vim'
 "}}}
 call vundle#end()
