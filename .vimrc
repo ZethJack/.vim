@@ -6,7 +6,7 @@ syntax on
 filetype off "needed for Vundle
 set relativenumber "lines numbers are relative to current line
 set hidden
-" window size and position {{{  
+" window size and position {{{
 if has("gui_running")
     set guioptions =-m
     if has("win32")
