@@ -19,6 +19,7 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'ahkcomplete'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neco-syntax'
+Plugin 'Shougo/neco-vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'pprovost/vim-ps1'
 "}}}
