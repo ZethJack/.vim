@@ -9,7 +9,8 @@ This repository is a portable version of my .vim directory, in theory it could b
 1. Download and install VIM 7.4, prefferably build that supports LUA and Python (required by some plugins)
 
 2. Remove *vimfiles* folder, *_vimrc* file (if exists) and clone the repository into %USERPROFILE%/.vim, or %HOME% directory if enviroment path for HOME directory is set.
-```rmdir /s /q vimfiles
+```
+rmdir /s /q vimfiles
 del _vimrc
 git clone path/to/this/.vim.git
 ```
