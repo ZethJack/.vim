@@ -14,12 +14,10 @@ rmdir /s /q vimfiles
 del _vimrc
 git clone path/to/this/.vim.git
 ```
-
 3. go to .vim\bundle and clone Vundle plugin manager from Vundle.vim repository so the plugins specified in plugin/vundle.vim can be installed.
 ```
 git clone https://github.com/VundleVim/Vundle.vim
 ```
-
 4. create symlink of .vimrc with
 ```
 mklink /d vimfiles .vim
@@ -35,7 +33,6 @@ At this point it should be good to go, It might be necessary to tweak the runtim
 ```
 git clone path/to/this/.vim.git
 ```
-
 3. go to .vim/bundle and clone vundle.vim
 ```
 git clone https://github.com/VundleVim/Vundle.vim
