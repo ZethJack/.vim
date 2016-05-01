@@ -22,5 +22,7 @@ Plugin 'Shougo/neco-syntax'
 Plugin 'Shougo/neco-vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'pprovost/vim-ps1'
+Plugin 'huleiak47/vim-ahkcomplete'
+Plugin 'terryma/vim-multiple-cursors'
 "}}}
 call vundle#end()
