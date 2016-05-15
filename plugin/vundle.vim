@@ -24,5 +24,6 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'pprovost/vim-ps1'
 Plugin 'huleiak47/vim-ahkcomplete'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'freitass/todo.txt-vim'
 "}}}
 call vundle#end()

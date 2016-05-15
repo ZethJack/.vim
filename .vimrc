@@ -60,7 +60,7 @@ xnoremap j gj
 xnoremap k gk
 nnoremap / /\v
 vnoremap / /\v
-map <C-t> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 map <C-s> :w<CR>
 nnoremap <space> za
 if has("gui")
