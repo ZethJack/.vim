@@ -91,3 +91,12 @@ inoremap (<cr> (<cr>)<c-o>O
 "NeoComplete toggle
 nnoremap <leader>nce :NeoCompleteEnable<cr>
 nnoremap <leader>ncd :NeoCompleteDisable<cr>
+"move lines up and down in normal mode with Alt
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+"move lines up and down in Insert mode with Alt
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+"move lines up and down in Visual mode with Alt
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
