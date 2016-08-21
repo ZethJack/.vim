@@ -8,14 +8,14 @@ set relativenumber "lines numbers are relative to current line
 set hidden
 " window size and position {{{
 if has("gui_running")
-    set guioptions =-m
-    if has("win32")
-        set lines=43 columns=120
-        winpos 220 0
-    else
-        set lines=45 columns=120
-        winpos 220 0
-    endif
+	set guioptions =-m
+	if has("win32")
+		set lines=43 columns=120
+		winpos 220 0
+	else
+		set lines=45 columns=120
+		winpos 220 0
+	endif
 endif
 "}}}
 set wrap
@@ -23,7 +23,7 @@ set linebreak
 set nolist "list disables linebreak
 set cursorline
 set ignorecase smartcase gdefault incsearch showmatch hlsearch
-set tabstop=8 softtabstop=4 expandtab shiftwidth=4 smarttab ai si
+set ts=2 sts=2 sw=2 noexpandtab smarttab ai si
 let mapleader=","
 set timeoutlen =5000
 set undofile
@@ -33,6 +33,7 @@ set undolevels=1000 undoreload=10000
 " load external files{{{
 source ~/.vim/plugin/vundle.vim "Vundle plugin manager
 source ~/.vim/plugin/neocomplete.vim "NeoComplete - Autocompletion plugin
+source ~/.vim/plugin/Stab.vim "Stab function
 "}}}
 "plugin configs {{{
 "after Vundle completes loading itself, following line re-enables filetype
@@ -48,7 +49,7 @@ set laststatus=2
 autocmd StdinReadPre * let s:std_in=1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType markdown NeoCompleteLock
-autocmd BufNewFile,BufReadPost *.p8 set sts=2 shiftwidth=2
+autocmd BufNewFile,BufReadPost *.p8 set expandtab
 autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
 au FocusLost * silent! wa
 "}}}
@@ -64,8 +65,8 @@ map <leader>n :NERDTreeToggle<CR>
 map <C-s> :w<CR>
 nnoremap <space> za
 if has("gui")
-    "distraction free mode
-    nnoremap <leader>g :Goyo<CR>
+	"distraction free mode
+	nnoremap <leader>g :Goyo<CR>
 endif
 "dims other lines for distraction free writing
 nnoremap <leader>l :Limelight!! 0.8<CR>

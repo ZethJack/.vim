@@ -21,9 +21,12 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neco-syntax'
 Plugin 'Shougo/neco-vim'
 Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/vim-journal'
 Plugin 'pprovost/vim-ps1'
 Plugin 'huleiak47/vim-ahkcomplete'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'isene/hyperlist.vim'
+Plugin 'vimoutliner/vimoutliner'
 "}}}
 call vundle#end()
