@@ -31,9 +31,9 @@ set undodir=$VIM/vimfiles/undo
 set undolevels=1000 undoreload=10000
 "}}}
 " load external files{{{
-source ~/.vim/plugin/vundle.vim "Vundle plugin manager
-source ~/.vim/plugin/neocomplete.vim "NeoComplete - Autocompletion plugin
-source ~/.vim/plugin/Stab.vim "Stab function
+source ~/.vim/scripts/vundle.vim "Vundle plugin manager
+source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
+source ~/.vim/scripts/Stab.vim "Stab function
 "}}}
 "plugin configs {{{
 "after Vundle completes loading itself, following line re-enables filetype
@@ -75,7 +75,7 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>:noh<CR>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <leader>ep <C-w><C-v><C-l>:e ~/.vim/plugin/vundle.vim<cr>
+nnoremap <leader>ep <C-w><C-v><C-l>:e ~/.vim/scripts/vundle.vim<cr>
 "close current window
 nnoremap <leader>cw <C-w>c
 "close other windows
