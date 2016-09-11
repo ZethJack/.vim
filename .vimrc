@@ -23,12 +23,23 @@ set linebreak
 set nolist "list disables linebreak
 set cursorline
 set ignorecase smartcase gdefault incsearch showmatch hlsearch
-set ts=2 sts=2 sw=2 noexpandtab smarttab ai si
+set ts=4 sts=4 sw=4 noexpandtab smarttab ai si
 let mapleader=","
 set timeoutlen =5000
 set undofile
 set undodir=$VIM/vimfiles/undo
 set undolevels=1000 undoreload=10000
+"}}}
+"{{{Utf-8?
+if has("multi_byte")
+	if &termencoding == ""
+		let &termencoding = &encoding
+	endif
+	set encoding=utf-8
+	setglobal fileencoding=utf-8
+	"setglobal bomb
+	set fileencodings=ucs-bom,utf-8,latin1
+endif
 "}}}
 " load external files{{{
 source ~/.vim/scripts/vundle.vim "Vundle plugin manager
@@ -49,8 +60,10 @@ set laststatus=2
 autocmd StdinReadPre * let s:std_in=1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType markdown NeoCompleteLock
-autocmd BufNewFile,BufReadPost *.p8 set expandtab
+autocmd BufNewFile,BufReadPost *.p8 set ts=2 sts=2 sw=2 expandtab
 autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
+au BufNewFile,BufReadPost *.lua set ts=2 sts=2 sw=2 expandtab
+au BufNewFile,BufReadPost *.otl set ts=2 sts=2 sw=2
 au FocusLost * silent! wa
 "}}}
 "Key bindings{{{
