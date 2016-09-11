@@ -43,9 +43,7 @@ endif
 "}}}
 " load external files{{{
 source ~/.vim/scripts/vundle.vim "Vundle plugin manager
-if has("lua")
-  source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
-endif
+source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
 source ~/.vim/scripts/Stab.vim "Stab function
 "}}}
 "plugin configs {{{
@@ -62,10 +60,10 @@ set laststatus=2
 autocmd StdinReadPre * let s:std_in=1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType markdown NeoCompleteLock
-autocmd BufNewFile,BufReadPost *.p8 setl ts=2 sts=2 sw=2 expandtab
+autocmd BufNewFile,BufReadPost *.p8 set ts=2 sts=2 sw=2 expandtab
 autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
-au BufNewFile,BufReadPost *.lua setl ts=2 sts=2 sw=2 expandtab
-au BufNewFile,BufReadPost *.otl setl ts=2 sts=2 sw=2
+au BufNewFile,BufReadPost *.lua set ts=2 sts=2 sw=2 expandtab
+au BufNewFile,BufReadPost *.otl set ts=2 sts=2 sw=2
 au FocusLost * silent! wa
 "}}}
 "Key bindings{{{
