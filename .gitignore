@@ -41,3 +41,5 @@ Thumbs.db
 Session.vim
 .netrwhist
 *~
+#vimoutliner plugin dir should be ignored
+vimoutliner/
