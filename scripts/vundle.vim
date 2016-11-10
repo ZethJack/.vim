@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
 Plugin 'VundleVim/Vundle.vim' "required
 "list of plugins {{{
+Plugin 'ciaranm/detectindent'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'

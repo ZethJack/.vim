@@ -29,6 +29,8 @@ set timeoutlen =5000
 set undofile
 set undodir=$VIM/vimfiles/undo
 set undolevels=1000 undoreload=10000
+set pastetoggle=<F2>
+set showmode
 "}}}
 "{{{Utf-8?
 if has("multi_byte")
@@ -67,6 +69,7 @@ autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
 au BufNewFile,BufReadPost *.lua setl ts=2 sts=2 sw=2 expandtab
 au BufNewFile,BufReadPost *.otl setl ts=2 sts=2 sw=2
 au FocusLost * silent! wa
+au BufEnter main.lua nnoremap <leader>r :!love .<CR>
 "}}}
 "Key bindings{{{
 " move by screen lines instead of real lines
@@ -118,3 +121,4 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 "move lines up and down in Visual mode with Alt
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <F2> :set invpaste paste?<CR>
