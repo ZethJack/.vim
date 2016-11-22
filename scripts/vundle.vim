@@ -31,5 +31,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'isene/hyperlist.vim'
 Plugin 'vimoutliner/vimoutliner'
+Plugin 'ervandew/supertab'
 "}}}
 call vundle#end()

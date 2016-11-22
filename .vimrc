@@ -46,7 +46,7 @@ endif
 " load external files{{{
 source ~/.vim/scripts/vundle.vim "Vundle plugin manager
 if has("lua")
-  source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
+	source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
 endif
 source ~/.vim/scripts/Stab.vim "Stab function
 "}}}
@@ -58,18 +58,28 @@ syntax enable
 set background=light
 set foldcolumn=2
 colorscheme solarized
+" Set light or dark according to time of the day {{{
+if strftime("%H") >= 5 && strfrime("%H") <= 17
+	set background=light
+else
+	set background=dark
+endif
+" }}}
 set laststatus=2
 "}}}
 "Autocmds {{{
-autocmd StdinReadPre * let s:std_in=1
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd FileType markdown NeoCompleteLock
-autocmd BufNewFile,BufReadPost *.p8 setl ts=2 sts=2 sw=2 expandtab
-autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
-au BufNewFile,BufReadPost *.lua setl ts=2 sts=2 sw=2 expandtab
-au BufNewFile,BufReadPost *.otl setl ts=2 sts=2 sw=2
-au FocusLost * silent! wa
-au BufEnter main.lua nnoremap <leader>r :!love .<CR>
+if has("autocmd")
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+	"autocmd FileType markdown NeoCompleteLock
+	autocmd BufWritePost * source ~/.vimrc
+	autocmd BufNewFile,BufReadPost *.p8 setl ts=2 sts=2 sw=2 expandtab
+	autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
+	au BufNewFile,BufReadPost *.lua setl ts=2 sts=2 sw=2 expandtab
+	au BufNewFile,BufReadPost *.otl setl ts=2 sts=2 sw=2
+	au FocusLost * silent! wa
+	au BufEnter main.lua nnoremap <leader>r :!love .<CR>
+endif
 "}}}
 "Key bindings{{{
 " move by screen lines instead of real lines
@@ -91,6 +101,7 @@ nnoremap <leader>l :Limelight!! 0.8<CR>
 nnoremap <leader><space> :noh<cr>
 "clears all whitespaces in the buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>:noh<CR>
+map <leader>R mzgg=G`z
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>ep <C-w><C-v><C-l>:e ~/.vim/scripts/vundle.vim<cr>
