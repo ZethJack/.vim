@@ -59,7 +59,7 @@ set background=light
 set foldcolumn=2
 colorscheme solarized
 " Set light or dark according to time of the day {{{
-if strftime("%H") >= 5 && strfrime("%H") <= 17
+if strftime("%H") >= 5 && strftime("%H") <= 17
 	set background=light
 else
 	set background=dark
@@ -72,7 +72,7 @@ if has("autocmd")
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 	"autocmd FileType markdown NeoCompleteLock
-	autocmd BufWritePost * source ~/.vimrc
+	autocmd BufWritePost * source $MYVIMRC
 	autocmd BufNewFile,BufReadPost *.p8 setl ts=2 sts=2 sw=2 expandtab
 	autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
 	au BufNewFile,BufReadPost *.lua setl ts=2 sts=2 sw=2 expandtab
