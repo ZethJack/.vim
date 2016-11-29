@@ -49,22 +49,17 @@ if has("lua")
 	source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
 endif
 source ~/.vim/scripts/Stab.vim "Stab function
+if &runtimepath =~ 'vim-colors-solarized'
+	source ~/.vim/scripts/backgrounds.vim
+endif
 "}}}
 "plugin configs {{{
 "after Vundle completes loading itself, following line re-enables filetype
 "detection
 filetype plugin indent on
 syntax enable
-set background=light
 set foldcolumn=2
 colorscheme solarized
-" Set light or dark according to time of the day {{{
-if strftime("%H") >= 5 && strftime("%H") <= 17
-	set background=light
-else
-	set background=dark
-endif
-" }}}
 set laststatus=2
 "}}}
 "Autocmds {{{
@@ -72,7 +67,7 @@ if has("autocmd")
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 	"autocmd FileType markdown NeoCompleteLock
-	autocmd BufWritePost * source $MYVIMRC
+	autocmd BufWritePost * source ~/.vim/scripts/backgrounds.vim
 	autocmd BufNewFile,BufReadPost *.p8 setl ts=2 sts=2 sw=2 expandtab
 	autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
 	au BufNewFile,BufReadPost *.lua setl ts=2 sts=2 sw=2 expandtab
