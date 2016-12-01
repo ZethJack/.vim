@@ -31,5 +31,6 @@ Plugin 'freitass/todo.txt-vim'
 Plugin 'isene/hyperlist.vim'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'ervandew/supertab'
+Plugin 'davisdude/vim-love-docs'
 "}}}
 call vundle#end()
