@@ -43,3 +43,4 @@ Session.vim
 *~
 #vimoutliner plugin dir should be ignored
 vimoutliner/
+bundle/
