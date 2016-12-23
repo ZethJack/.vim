@@ -74,7 +74,6 @@ if has("autocmd")
 	au BufNewFile,BufReadPost *.otl setl ts=2 sts=2 sw=2
 	au FocusLost * silent! wa
 	au BufEnter main.lua nnoremap <leader>r :!love .<CR>
-	au BufNewFile * set ff='unix'
 endif
 "}}}
 "Key bindings{{{
