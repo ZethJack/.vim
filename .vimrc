@@ -27,7 +27,7 @@ set ts=4 sts=4 sw=4 noexpandtab smarttab ai si
 let mapleader=","
 set timeoutlen =5000
 set undofile
-set undodir=$VIM/vimfiles/undo
+set undodir=$HOME/.vim/undo
 set undolevels=1000 undoreload=10000
 set pastetoggle=<F2>
 set showmode
