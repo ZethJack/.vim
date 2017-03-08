@@ -32,5 +32,7 @@ Plugin 'isene/hyperlist.vim'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'ervandew/supertab'
 Plugin 'davisdude/vim-love-docs'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'konfekt/fastfold'
 "}}}
 call vundle#end()

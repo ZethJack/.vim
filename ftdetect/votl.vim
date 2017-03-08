@@ -23,3 +23,4 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.otl		setfiletype votl
   au! BufRead,BufNewFile *.oln		setfiletype xoutliner
 augroup END
+
