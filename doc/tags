@@ -1,4 +1,3 @@
-!_TAG_FILE_ENCODING	utf-8	//
 otl2html	votl.txt	/*otl2html*
 vimoutliner	votl.txt	/*vimoutliner*
 vimoutlinerrc	votl.txt	/*vimoutlinerrc*
@@ -31,3 +30,4 @@ votl-testing	votl.txt	/*votl-testing*
 votl-troubleshooting	votl.txt	/*votl-troubleshooting*
 votl-updating	votl.txt	/*votl-updating*
 votl_cheatsheet.txt	votl_cheatsheet.txt	/*votl_cheatsheet.txt*
+votl_readme.txt	votl.txt	/*votl_readme.txt*
