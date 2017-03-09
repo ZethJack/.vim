@@ -94,12 +94,12 @@ endif
 "dims other lines for distraction free writing
 nnoremap <leader>l :Limelight!! 0.8<CR>
 nnoremap <leader><space> :noh<cr>
-"clears all whitespaces in the buffer
+"clears all trailing whitespaces in the buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>:noh<CR>
 map <leader>R mzgg=G`z
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>w <C-w>v<C-w>l
-nnoremap <leader>ep <C-w><C-v><C-l>:e ~/.vim/scripts/vundle.vim<cr>
+nnoremap <leader>ep :e ~/.vim/scripts/vundle.vim<cr>
 "close current window
 nnoremap <leader>cw <C-w>c
 "close other windows
