@@ -23,7 +23,7 @@ set linebreak
 set nolist "list disables linebreak
 set cursorline
 set ignorecase smartcase gdefault incsearch showmatch hlsearch
-set ts=4 sts=4 sw=4 noexpandtab smarttab ai si
+set ts=4 sts=4 sw=4 noexpandtab smarttab ai cin cink-=0# indk-=0#
 let mapleader=","
 set timeoutlen =5000
 set undofile
