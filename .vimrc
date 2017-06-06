@@ -9,6 +9,7 @@ set hidden
 " window size and position {{{
 if has("gui_running")
 	set guioptions =-m
+	set guifont=DejaVu_Sans_Mono:h10
 	if has("win32")
 		set lines=43 columns=120
 		winpos 220 0
@@ -128,3 +129,4 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <F2> :set invpaste paste?<CR>
+map <F7> mzgg=G`z

@@ -7,6 +7,7 @@ Plugin 'VundleVim/Vundle.vim' "required
 Plugin 'ciaranm/detectindent'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-markdown'
@@ -34,5 +35,6 @@ Plugin 'ervandew/supertab'
 Plugin 'davisdude/vim-love-docs'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'konfekt/fastfold'
+Plugin 'nvie/vim-flake8'
 "}}}
 call vundle#end()
