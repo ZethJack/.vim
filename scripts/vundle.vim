@@ -7,7 +7,7 @@ Plugin 'VundleVim/Vundle.vim' "required
 Plugin 'ciaranm/detectindent'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-markdown'
