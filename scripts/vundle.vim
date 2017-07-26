@@ -18,11 +18,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
 Plugin 'junegunn/limelight.vim'
 Plugin 'ahkcomplete'
-if has("lua")
-	Plugin 'Shougo/neocomplete.vim'
-	Plugin 'Shougo/neco-syntax'
-	Plugin 'Shougo/neco-vim'
-endif
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/vim-journal'
 Plugin 'pprovost/vim-ps1'
