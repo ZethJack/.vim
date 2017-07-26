@@ -46,9 +46,6 @@ endif
 "}}}
 " load external files{{{
 source ~/.vim/scripts/vundle.vim "Vundle plugin manager
-if has("lua")
-	source ~/.vim/scripts/neocomplete.vim "NeoComplete - Autocompletion plugin
-endif
 source ~/.vim/scripts/Stab.vim "Stab function
 if &runtimepath =~ 'vim-colors-solarized'
 	source ~/.vim/scripts/backgrounds.vim
@@ -67,7 +64,6 @@ set laststatus=2
 if has("autocmd")
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-	"autocmd FileType markdown NeoCompleteLock
 	autocmd BufWritePost * source ~/.vim/scripts/backgrounds.vim
 	autocmd BufNewFile,BufReadPost *.p8 setl ts=2 sts=2 sw=2 expandtab
 	autocmd BufNewFile,BufReadPost *.ahk set filetype=autohotkey
@@ -114,11 +110,6 @@ nnoremap <C-l> <C-w>l
 inoremap {<cr> {<cr>}<c-o>O
 inoremap [<cr> [<cr>]<c-o>O
 inoremap (<cr> (<cr>)<c-o>O
-"NeoComplete toggle
-if has("lua")
-	nnoremap <leader>nce :NeoCompleteEnable<cr>
-	nnoremap <leader>ncd :NeoCompleteDisable<cr>
-endif
 "move lines up and down in normal mode with Alt
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
