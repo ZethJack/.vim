@@ -31,5 +31,6 @@ Plugin 'davisdude/vim-love-docs'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'konfekt/fastfold'
 Plugin 'nvie/vim-flake8'
+Plugin 'PotatoesMaster/i3-vim-syntax'
 "}}}
 call vundle#end()

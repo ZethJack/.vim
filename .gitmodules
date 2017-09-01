@@ -1,3 +1,7 @@
 [submodule "bundle/Vundle.vim"]
 	path = bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
+[submodule ".vim"]
+	path = .vim
+	url = http://github.com/ZethJack/.vim
+	branch = master
