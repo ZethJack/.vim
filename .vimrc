@@ -8,8 +8,9 @@ set relativenumber "lines numbers are relative to current line
 set hidden
 " window size and position {{{
 if has("gui_running")
-	set guioptions =-m
-	set guifont=DejaVu_Sans_Mono:h10
+	set guioptions-=m
+	set guioptions-=T
+	set guifont=Droid\ Sans\ Mono\ 10
 	if has("win32")
 		set lines=43 columns=120
 		winpos 220 0
@@ -57,7 +58,9 @@ endif
 filetype plugin indent on
 syntax enable
 set foldcolumn=2
-colorscheme solarized
+if has("gui_running")
+	colorscheme solarized
+endif
 set laststatus=2
 "}}}
 "Autocmds {{{
