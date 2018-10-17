@@ -27,8 +27,14 @@ set ignorecase smartcase gdefault incsearch showmatch hlsearch
 set ts=4 sts=4 sw=4 noexpandtab smarttab ai cin cink-=0# indk-=0#
 let mapleader=","
 set timeoutlen =5000
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo")
+    call mkdir($HOME."/.vim/undo", "", 0700)
+endif
+set undodir=~/.vim/undo
 set undofile
-set undodir=$HOME/.vim/undo
 set undolevels=1000 undoreload=10000
 set pastetoggle=<F2>
 set showmode
